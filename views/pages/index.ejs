@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>S3 POST Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.40.min.js"></script>
+  </head>
+  <body>
+    <form action="https://moo-d.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="key" value="uploads/${filename}">
+      <input type="hidden" name="AWSAccessKeyId" value="AKIAJUHX7LZLFQ7FVRIA">
+      <input type="hidden" name="acl" value="public-read">
+      <input type="hidden" name="success_action_redirect" value="http://localhost:3000/">
+      <input type="hidden" name="policy" value="ew0KICAiVmVyc2lvbiI6ICIyMDEyLTEwLTE3IiwNCiAgIlN0YXRlbWVudCI6IFsNCiAgICB7DQogICAgICAiRWZmZWN0IjogIkFsbG93IiwNCiAgICAgICJBY3Rpb24iOiAiczM6KiIsDQogICAgICAiUmVzb3VyY2UiOiAiKiINCiAgICB9DQogIF0NCn0=">
+      <input type="hidden" name="signature" value=" Ulxd3YUagWWS583TOsU9OzI0jig%3D">
+      <input type="hidden" name="Content-Type" value="image/jpeg">
+      <!-- Include any additional input fields here -->
+      File to upload to S3:
+      <input name="file" type="file">
+      <br>
+      <input type="submit" value="Upload File to S3">
+    </form>
+  </body>
+</html>
